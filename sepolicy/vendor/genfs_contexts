@@ -47,3 +47,11 @@ genfscon sysfs /devices/platform/soc/soc:md_testing_mode/wakeup u:object_r:sysfs
 genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/subsys3/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys4/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,trustedvm@d0800000/subsys1/wakeup u:object_r:sysfs_wakeup:s0
+
+# Powerhint Nodes
+genfscon sysfs /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us    u:object_r:vendor_sysfs_schedutil:s0
+genfscon sysfs /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us  u:object_r:vendor_sysfs_schedutil:s0
+genfscon sysfs /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us    u:object_r:vendor_sysfs_schedutil:s0
+genfscon sysfs /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us  u:object_r:vendor_sysfs_schedutil:s0
+genfscon sysfs /sys/devices/system/cpu/cpu7/cpufreq/schedutil/up_rate_limit_us    u:object_r:vendor_sysfs_schedutil:s0
+genfscon sysfs /sys/devices/system/cpu/cpu7/cpufreq/schedutil/down_rate_limit_us  u:object_r:vendor_sysfs_schedutil:s0
