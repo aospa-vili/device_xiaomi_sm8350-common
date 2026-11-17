@@ -23,9 +23,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-# GameBar Performance Overlay
-$(call inherit-product-if-exists, packages/apps/GameBar/gamebar.mk)
-
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
@@ -105,9 +102,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
-
-# BCR
-$(call inherit-product, vendor/bcr/bcr.mk)
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -309,10 +303,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=E)
 endif
 
-# MatLog
-PRODUCT_PACKAGES += \
-    MatLog
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh \
@@ -478,9 +468,6 @@ PRODUCT_PACKAGES += \
 # Touchscreen
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
-
-# TouchServices
-$(call inherit-product, packages/apps/TouchServices/touchservice.mk)
 
 # Ueventd
 PRODUCT_COPY_FILES += \
